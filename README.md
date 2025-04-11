@@ -27,6 +27,9 @@ kind create cluster --config multi-node-cluster.yml
 ### Verify the cluster creation
 kind get clusters
 
+### Kubectl Cheat Sheet
+https://kubernetes.io/docs/reference/kubectl/quick-reference/
+
 ### Verify if Kubectl is pointing to the newly created cluster
 kubectl config current-context  # If already set, continue. Else, run next line  
 kubectl config set-context kind-<cluster_name>  # In our case, its simple-cluster
