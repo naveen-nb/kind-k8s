@@ -34,5 +34,18 @@ kubectl config set-context kind-<cluster_name>  # In our case, its simple-cluste
 ### Details of the cluster
 kubectl cluster-info --context kind-<cluster_name>
 
+### Deploy a simple nginx image
+kubectl create deployment nginx-demo --image=nginx
+
+### Verify the pods
+kubectl get pods
+
+### Test port-forwarding to access the running nginx
+kubectl port-forward pod/<nginx_pod_name> 8080:80
+
+### Verify nginx-server is up and running
+If docker on local windows/mac - http://localhost:8080
+If docker on linux - curl http://localhost:8080
+
 ### Delete the cluster
 kubectl delete cluster -n simple-cluster
