@@ -21,6 +21,9 @@ docker login
 ### Simple single node cluster creation
 kind create cluster -n simple-cluster
 
+### Multi node cluster creation
+kind create cluster --config multi-node-cluster.yml
+
 ### Verify the cluster creation
 kind get clusters
 
